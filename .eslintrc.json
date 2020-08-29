@@ -1,0 +1,47 @@
+{
+  "env": {
+    "browser": true,
+    "es2020": true
+  },
+  "extends": [
+    "airbnb-base",
+    "prettier",
+    "plugin:import/typescript",
+    "plugin:@typescript-eslint/eslint-recommended",
+    "plugin:@typescript-eslint/recommended"
+  ],
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "ecmaVersion": 11,
+    "sourceType": "module"
+  },
+  "plugins": [
+    "@typescript-eslint",
+    "prettier",
+    "import"
+  ],
+  "settings": {
+    "import/resolver": {
+      "node": {
+        "extensions": [
+          ".ts"
+        ]
+      }
+    }
+  },
+  "rules": {
+    "prettier/prettier": 2,
+    "no-restricted-syntax": 0,
+    "import/extensions": [
+      "error",
+      "ignorePackages",
+      {
+        "js": "never",
+        "jsx": "never",
+        "ts": "never",
+        "tsx": "never"
+      }
+    ],
+    "no-underscore-dangle": 0
+  }
+}
